@@ -11,13 +11,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { DiscoverArticleContent } from '@/static/content/discover';
 import { TeamMemberContent } from '@/static/content/team';
-import { COMING_SOON } from '@/static/content/highlights';
+import {
+  COMING_SOON,
+  HighlightsArticleContent,
+} from '@/static/content/highlights';
 import ComingSoonSliderPanel from './ComingSoonSliderPanel';
 import SliderPanel from './SliderPanel';
+import { ComingSoonCardHeader } from '@/assets';
 
-type Slides = Partial<TeamMemberContent>;
+type Slides = TeamMemberContent | HighlightsArticleContent;
 
 export interface ISliderProps {
   slides: Slides[];
@@ -54,7 +57,7 @@ const Slider: React.FC<ISliderProps> = ({
   while (slides.length < 4) {
     slides.push({
       name: '',
-      image: '',
+      image: ComingSoonCardHeader,
       bg: '',
       link: '',
       desc: COMING_SOON,
@@ -108,7 +111,7 @@ const Slider: React.FC<ISliderProps> = ({
                   className={`rounded-lg  h-[700px]`}
                 >
                   {desc === COMING_SOON ? (
-                    <ComingSoonSliderPanel {...{ desc, link, index }} />
+                    <ComingSoonSliderPanel {...{ desc, link, image, index }} />
                   ) : (
                     <SliderPanel
                       {...{

@@ -1,9 +1,9 @@
-import { Person, D, D2, D3 } from '@/assets';
+import { D } from '@/assets';
 import { StaticImageData } from 'next/image';
 
 export type HighlightsArticleContent = {
   name: string;
-  image: StaticImageData | string;
+  image: StaticImageData;
   bg: string;
   link?: string;
   desc?: string;

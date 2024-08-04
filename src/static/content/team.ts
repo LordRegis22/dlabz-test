@@ -1,4 +1,3 @@
-import { Person } from '@/assets';
 import { StaticImageData } from 'next/image';
 import teamImages from '@/assets/team-images';
 

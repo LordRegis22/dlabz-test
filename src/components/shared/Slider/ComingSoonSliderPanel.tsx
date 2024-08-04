@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SwiperSlide } from 'swiper/react';
-import { ComingSoonCardHeader } from '@/assets';
 import Image, { StaticImageData } from 'next/image';
 
 type ComingSoonSliderPanelProps = {
   index: number;
   link: string | undefined;
+  image: StaticImageData;
 };
-const ComingSoonSliderPanel = ({ index, link }: ComingSoonSliderPanelProps) => {
+const ComingSoonSliderPanel = ({
+  index,
+  link,
+  image,
+}: ComingSoonSliderPanelProps) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
@@ -24,7 +28,7 @@ const ComingSoonSliderPanel = ({ index, link }: ComingSoonSliderPanelProps) => {
             alt={`Black Square`}
           /> */}
           <Image
-            src={ComingSoonCardHeader as StaticImageData}
+            src={image}
             style={{
               objectPosition: 'top',
               height: '270px',

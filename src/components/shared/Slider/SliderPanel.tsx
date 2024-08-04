@@ -2,7 +2,22 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { SquareIcon } from '../svgs';
 
-const SliderPanel = ({ discover, desc, link, image, name, optionalProps }) => {
+type SliderPanelProps = {
+  discover: boolean;
+  desc?: string;
+  link?: string;
+  image: StaticImageData;
+  name: string;
+  optionalProps: any;
+};
+const SliderPanel = ({
+  discover,
+  desc,
+  link,
+  image,
+  name,
+  optionalProps,
+}: SliderPanelProps) => {
   return (
     <>
       <Image
