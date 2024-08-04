@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - echo "Install dependencies"
+      - npm install
+
+  build:
+    commands:
+      - echo "Build and export Next.js app"
+      - npm run build
+
+  post_build:
+    commands:
+      - aws s3 sync out/ s3://destructionlabz-webapp
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "out"
+
+cache:
+  paths:
+    - node_modules/

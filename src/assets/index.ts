@@ -1,0 +1,15 @@
+export { default as Logo } from './logo.png';
+export { default as ColorLogo } from './Dlabz-logo-color.jpg';
+export { default as Graphic } from './Graphic (1).png';
+export { default as AboutUsImage } from './aboutus.png';
+export { default as Grey } from './Grey.svg';
+export { default as D } from './d1.png';
+export { default as D2 } from './d2.png';
+export { default as D3 } from './d3.png';
+export { default as ComingSoonCardHeader } from './ComingSoon_CardHeader.png';
+export { default as ComingSoonCardBody } from './ComingSoon_CardBody.png';
+export { default as LogoFooter } from './logo-footer.png';
+export { default as AboutUsImageMb } from './aboutusmb.png';
+export { default as GlitchBg } from './glitchbgimg.png';
+export { default as AboutusImageMd } from './aboutusmd.svg';
+export { default as ComingSoon } from './comingsoon-bg.png';

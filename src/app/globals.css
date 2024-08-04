@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* scroll-snap-type: y mandatory; */
+}
+
+body {
+  background: rgb(18, 18, 18);
+  /* background: linear-gradient(
+    270deg,
+    #1a1b21 0%,
+    #24252e 26.04%,
+    #252730 51.73%,
+    #202229 75.52%,
+    #18191e 100%
+  ); */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  /* background-color: #ffffff !important; */
+  /* padding: 20px !important;
+  border-radius: 50% !important;
+  width: 45px !important;
+  height: 45px !important; */
+  /* top: 55% !important; */
+}
+
+.swiper-button-prev:after {
+  font-size: 25px !important;
+  font-weight: 500 !important;
+}
+
+.swiper-button-next:after {
+  font-size: 25px !important;
+  font-weight: 500 !important;
+}
+
+@font-face {
+  font-family: 'Bahnschrift';
+  font-weight: 400;
+  src: url('/fonts/BAHNSCHRIFT.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bahnschrift Bold Condensed';
+  font-style: bold;
+  font-style: normal;
+  font-stretch: condensed;
+  src: url('/fonts/BAHNSCHRIFT.TTF') format('truetype');
+}
+
+.bahnschrift {
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+.bahnschrift-bold-condensed {
+  font-family: 'Bahnschrift Bold Condensed', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Bahnschrift Bold Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+/* .swiper-button-next, .swiper-button-prev {
+    color: #2A160C !important;
+    background-color: #ffffff !important;
+    padding: 4px !important;
+    border-radius: 50% !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .swiper-button-prev:after{
+    font-size: 15px !important;
+    font-weight: 900 !important;
+  }
+
+  .swiper-button-next:after {
+    font-size: 15px !important;
+    font-weight: 900 !important;
+  }
+
+  .swiper-pagination-bullet{
+    background-color: #2A160C !important;
+  }
+
+.bg-pink-gradient{
+  opacity: 0.35;
+  }
+.bg-pink-gradient::before,
+.bg-blue-gradient::before,
+.bg-purple-gradient::before,
+.bg-orange-gradient::before {
+  content: '';
+  z-index: 1000;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: -100px;
+  background-image: url('/div.png');
+}
+
+.bg-pink-gradient::before,
+.bg-blue-gradient::before {
+  top: -80px;
+}
+
+.bg-orange-gradient::before {
+  top: -120px;
+}
+
+@media (max-width: 768px) {
+  .bg-pink-gradient::before,
+  .bg-blue-gradient::before,
+  .bg-orange-gradient::before,
+  .bg-purple-gradient::before {
+    height: 260px;
+    top: -130px;
+  }
+}
+
+@media (max-width: 550px) {
+  .bg-purple-gradient::before {
+    background: none;
+  }
+
+  .bg-pink-gradient::before,
+  .bg-blue-gradient::before {
+    top: -80px;
+  }
+} */
