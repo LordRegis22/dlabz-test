@@ -1,6 +1,6 @@
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { SquareIcon } from '../svgs';
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+import { SquareIcon } from "../svgs";
 
 type SliderPanelProps = {
   discover: boolean;
@@ -23,19 +23,20 @@ const SliderPanel = ({
       <Image
         src={image as StaticImageData}
         style={{
-          objectPosition: 'top',
-          height: '270px',
-          width: '100%',
-          aspectRatio: '286/267',
+          objectPosition: "top",
+          height: "270px",
+          width: "100%",
+          objectFit: "cover",
+          aspectRatio: "286/267",
         }}
-        className='rounded-t-lg'
+        className="rounded-t-lg"
         alt={`Image of ${name}`}
       />
 
-      <div className='px-4'>
+      <div className="px-4">
         <h2
           className={`pr-2 ${
-            discover ? 'text-start pt-10' : 'text-center'
+            discover ? "text-start pt-10" : "text-center"
           } font-bold text-2xl my-2`}
         >
           {name}
@@ -43,7 +44,7 @@ const SliderPanel = ({
         {optionalProps.role && (
           <p
             className={`text-[15px] flex items-center justify-center gap-2 ${
-              discover ? 'text-left' : 'text-center'
+              discover ? "text-left" : "text-center"
             } text-black text-bold`}
           >
             <SquareIcon /> {optionalProps.role}
@@ -53,15 +54,15 @@ const SliderPanel = ({
 
       <div
         className={`mt-1 text-[16px] tracking-wide ${
-          discover ? 'text-[#52525B]' : 'text-black'
-        } px-4 py-2 ${discover ? 'text-left' : 'text-center'}`}
+          discover ? "text-[#52525B]" : "text-black"
+        } px-3 py-2 ${discover ? "text-left" : "text-center"}`}
       >
         {discover ? desc : `"${desc}"`}
       </div>
       {link && (
         <a
           href={link}
-          className='text-lg font-extrabold md:mt-5 px-4 py-2 text-hyperlink'
+          className="text-lg font-extrabold md:mt-5 px-4 py-2 text-hyperlink"
         >
           Read More
         </a>

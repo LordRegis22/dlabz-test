@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { INavBarLink } from '@/static/content/sections';
-import React from 'react';
-import useHash from '@/hooks/useHash';
+import { INavBarLink } from "@/static/content/sections";
+import React from "react";
+import useHash from "@/hooks/useHash";
 
 interface IProps {
   link: INavBarLink;
@@ -17,13 +17,14 @@ const NavItem: React.FC<IProps> = ({ link, setToggle }) => {
       key={`${link.title}-NavItem`}
       className={`
     mx-3
-    text-[18px]
+    2.5xl:text-[18px]
+    text-[14px]
     min-w-[70px]
     text-center
     px-2 py-1
     hover:text-gray-400
     transition-all
-    ${hash === link.title ? ' bg-[#F8EE44] text-black rounded-sm' : ''}
+    ${hash === link.title ? " bg-[#F8EE44] text-black rounded-sm" : ""}
     `}
     >
       <a

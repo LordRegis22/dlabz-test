@@ -1,4 +1,3 @@
-import { GlitchBg } from "@/assets";
 import { Video } from "@/components/shared";
 import Image from "next/image";
 import React from "react";
@@ -9,9 +8,9 @@ const Hero = () => {
       <div className="hidden md:block">
         <Video src="/glitchbg.mp4" thumbnail="/glitchbgimg.png" />
       </div>
-      <div className="block md:hidden">
+      <div className="block md:hidden mt-4">
         <Image
-          src={GlitchBg}
+          src={"/glitchbgimg.png"}
           alt="hero"
           width={1920}
           height={1080}

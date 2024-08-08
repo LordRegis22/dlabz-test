@@ -1,24 +1,24 @@
-'use client';
-import React, { useRef } from 'react';
-import { Pagination, A11y, Virtual, EffectCoverflow } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { SquareIcon } from '@/components/shared';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+"use client";
+import React, { useRef } from "react";
+import { Pagination, A11y, Virtual, EffectCoverflow } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { SquareIcon } from "@/components/shared";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 // Import Swiper styles`
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import { TeamMemberContent } from '@/static/content/team';
+import { TeamMemberContent } from "@/static/content/team";
 import {
   COMING_SOON,
   HighlightsArticleContent,
-} from '@/static/content/highlights';
-import ComingSoonSliderPanel from './ComingSoonSliderPanel';
-import SliderPanel from './SliderPanel';
-import { ComingSoonCardHeader } from '@/assets';
+} from "@/static/content/highlights";
+import ComingSoonSliderPanel from "./ComingSoonSliderPanel";
+import SliderPanel from "./SliderPanel";
+import { ComingSoonCardHeader } from "@/assets";
 
 type Slides = TeamMemberContent | HighlightsArticleContent;
 
@@ -34,14 +34,14 @@ const SlideNextButton = ({
   swiperRef: React.MutableRefObject<any>;
 }) => {
   return (
-    <div className='swiper-icons-wrap block'>
+    <div className="swiper-icons-wrap block">
       <div
         onClick={() => swiperRef?.current.slidePrev()}
-        className='swiper-button-prev !ml-[-50px]'
+        className="swiper-button-prev !ml-[-50px]"
       ></div>
       <div
         onClick={() => swiperRef?.current.slideNext()}
-        className='swiper-button-next !mr-[-50px]'
+        className="swiper-button-next !mr-[-50px]"
       ></div>
     </div>
   );
@@ -56,16 +56,16 @@ const Slider: React.FC<ISliderProps> = ({
 
   while (slides.length < 4) {
     slides.push({
-      name: '',
+      name: "",
       image: ComingSoonCardHeader,
-      bg: '',
-      link: '',
+      bg: "",
+      link: "",
       desc: COMING_SOON,
     });
   }
 
   return (
-    <div className='relative'>
+    <div className="relative">
       <Swiper
         grabCursor={true}
         watchSlidesProgress
@@ -85,6 +85,9 @@ const Slider: React.FC<ISliderProps> = ({
             slidesPerView: discover ? 3 : 3.5,
           },
           1500: {
+            slidesPerView: discover ? 3 : 3.7,
+          },
+          1700: {
             slidesPerView: discover ? 3 : 4.5,
           },
         }}
@@ -94,7 +97,7 @@ const Slider: React.FC<ISliderProps> = ({
         navigation={false}
         spaceBetween={20}
         modules={[Pagination, A11y, Virtual]}
-        className='max-w-[2200px]'
+        className="max-w-[2200px]"
       >
         {slides.map(
           (
@@ -108,7 +111,7 @@ const Slider: React.FC<ISliderProps> = ({
               >
                 <motion.div
                   style={{ backgroundColor: bg }}
-                  className={`rounded-lg  h-[700px]`}
+                  className={`rounded-lg min-h-[620px] mdn:min-h-[700px] lg:min-h-[645px] xl:min-h-[620px]`}
                 >
                   {desc === COMING_SOON ? (
                     <ComingSoonSliderPanel {...{ desc, link, image, index }} />
